@@ -7,91 +7,259 @@
 
 import time
 
-def first_diganostic_young(body_temp, hearth_rate, saturation):
-    if body_temp > 36.5 and body_temp < 37.5:
+def first_diganostic_infant(body_temp, hearth_rate, saturation):
+    if body_temp > 37.5 and body_temp < 38:
         pass
-        if hearth_rate > 51 and hearth_rate < 101:
+        if hearth_rate > 100 and hearth_rate < 130:
+            pass
             if saturation > 92 and saturation < 101:
-                print("Patient (young) is stable\n")
+                print("Patient (infant) is stable\n")
             else:
-                print("Patient (young) goes into alarm1 state\n")
+                print("Patient (infant) goes into alarm1 state (Diagnostic: Oxygen Saturation out of range)\n")
         else:
-            print("Patient (young) goes into alarm1 state\n")
+            print("Patient (infant) goes into alarm1 state (Diagnostic: Hearth Rate out of range)\n")
     else:
-        print("Patient (young) goes into alarm1 state\n")
+        print("Patient (infant) goes into alarm1 state (Diagnostic: High temperature)\n")
+
         return print("** Do a new diagnostic within five minutes **\n")
 
-def second_diagnostic_young(body_temp, hearth_rate, saturation):
+def second_diagnostic_infant(body_temp, hearth_rate, saturation):
     body_temp = float(input("Body Temperature\n"))
     hearth_rate = int(input("Type Hearth Rate\n"))
     saturation = float(input("Type Saturation\n"))
     if body_temp < 38:
         pass
-        if hearth_rate > 150 and hearth_rate < 50:
+        if hearth_rate > 100 and hearth_rate < 140:
             pass
-            if saturation > 92 and saturation < 89:
-                print("Patient (young) is stable\n")
+            if saturation > 92 and saturation < 100:
+                print("Patient (infant) is stable\n")
             else:
-                print("Patient (young) goes into alarm2 state\n")
+                print("Patient (infant) goes into alarm2 state (Diagnostic: Oxygen Saturation out of range)\n")
         else:
-            print("Patient (young) goes into alarm2 state\n")
-    else:
-        print("Patient (young) goes into alarm2 state\n")
+            print("Patient (infant) goes into alarm2 state (Diagnostic: Hearth Rate out of range)\n")
+    else: 
+        print("Patient (infant) goes into alarm2 state (Diagnostic: High temperature)\n")
 
     return print("** Do a new diagnostic within five minutes **\n")
 
-def third_diganostic_young(body_temp, hearth_rate, saturation):
+def third_diganostic_infant(body_temp, hearth_rate, saturation):
     body_temp = float(input("Body Temperature\n"))
     hearth_rate = int(input("Type Hearth Rate\n"))
     saturation = float(input("Type Saturation\n"))
     if body_temp < 38:
         pass
-        if hearth_rate < 160:
+        if hearth_rate < 140:
             pass
             if saturation < 88 and saturation > 85:
-                print("Patient (young) remains in alarm2 state\n")
+                print("Patient (infant) remains in alarm2 state\n")
             else:
-                print("Patient (young) goes into alarm3 state\n")
+                print("Patient (infant) goes into alarm3 state (Diagnostic: Oxygen Saturation out of range)\n")
         else:
-            print("Patient (young) goes into alarm3 state\n")
+            print("Patient (infant) goes into alarm3 state (Diagnostic: Hearth Rate out of range)\n")
     else:
-        print("Patient (young) goes into alarm3 state\n")
+        print("Patient (infant) goes into alarm3 state (Diagnostic: High temperature)\n")
 
     return print("** Do a new diagnostic within five minutes **\n")
 
+# ------------------------------------------------------------------------------
+
+def first_diganostic_preschool_child(body_temp, hearth_rate, saturation):
+    if body_temp > 37.5 and body_temp < 38:
+        pass
+        if hearth_rate > 79 and hearth_rate < 120:
+            pass
+            if saturation > 92 and saturation < 101:
+                print("Patient (preschool child) is stable\n")
+            else:
+                print("Patient (preschool child) goes into alarm1 state (Diagnostic: Oxygen Saturation out of range)\n")
+        else:
+            print("Patient (preschool child) goes into alarm1 state (Diagnostic: Hearth Rate out of range)\n")
+    else:
+        print("Patient (preschool child) goes into alarm1 state (Diagnostic: High temperature)\n")
+
+        return print("** Do a new diagnostic within five minutes **\n")
     
 
+def second_diagnostic_preschool_child(body_temp, hearth_rate, saturation):
+    body_temp = float(input("Body Temperature\n"))
+    hearth_rate = int(input("Type Hearth Rate\n"))
+    saturation = float(input("Type Saturation\n"))
+    if body_temp > 37.5 and body_temp < 38:
+        pass
+        if hearth_rate > 79 and hearth_rate < 120:
+            pass
+            if saturation > 92 and saturation < 101:
+                print("Patient (preschool child) is stable\n")
+            else:
+                print("Patient (preschool child) goes into alarm2 state (Diagnostic: Oxygen Saturation out of range)\n")
+        else:
+            print("Patient (preschool child) goes into alarm2 state (Diagnostic: Hearth Rate out of range)\n")
+    else:
+        print("Patient (preschool child) goes into alarm2 state (Diagnostic: High temperature)\n")
 
+    return print("** Do a new diagnostic within five minutes **\n")
 
-def first_diganostic_adult(body_temp, hearth_rate, saturation):
+def third_diganostic_preschool_child(body_temp, hearth_rate, saturation):
+    body_temp = float(input("Body Temperature\n"))
+    hearth_rate = int(input("Type Hearth Rate\n"))
+    saturation = float(input("Type Saturation\n"))
+    if body_temp > 37.5 and body_temp < 38:
+        pass
+        if hearth_rate > 79 and hearth_rate < 120:
+            pass
+            if saturation > 92 and saturation < 101:
+                print("Patient (preschool child) remains in alarm2 state\n")
+            else:
+                print("Patient (preschool child) goes into alarm3 state (Diagnostic: Oxygen Saturation out of range)\n")
+        else:
+            print("Patient (preschool child) goes into alarm3 state (Diagnostic: Hearth Rate out of range\n")
+    else:
+        print("Patient (preschool child) goes into alarm3 state (Diagnostic: High temperature)\n")
+
+    return print("** Do a new diagnostic within five minutes **\n")
+
+# ----------------------------------------------------------------------------------
+
+def first_diganostic_child(body_temp, hearth_rate, saturation):
+    if body_temp > 37 and body_temp < 37.5:
+        pass
+        if hearth_rate > 79 and hearth_rate < 101:
+            pass
+            if saturation > 92 and saturation < 101:
+                print("Patient (child) is stable\n")
+            else:
+                print("Patient (child) goes into alarm1 state (Diagnostic: Oxygen Saturation out of range)\n")
+        else:
+            print("Patient (child) goes into alarm1 state (Diagnostic: Hearth Rate out of range\n")
+    else:
+        print("Patient (child) goes into alarm1 state (Diagnostic: High temperature)\n")
+
+        return print("** Do a new diagnostic within five minutes **\n")
+
+def second_diagnostic_child(body_temp, hearth_rate, saturation):
+    body_temp = float(input("Body Temperature\n"))
+    hearth_rate = int(input("Type Hearth Rate\n"))
+    saturation = float(input("Type Saturation\n"))
+    if body_temp > 37 and body_temp < 37.5:
+        pass
+        if hearth_rate > 79 and hearth_rate < 101:
+            pass
+            if saturation > 92 and saturation < 101:
+                print("Patient (child) is stable\n")
+            else:
+                print("Patient (child) goes into alarm2 state (Diagnostic: Oxygen Saturation out of range)\n")
+        else:
+            print("Patient (child) goes into alarm2 state (Diagnostic: Hearth Rate out of range\n")
+    else:
+        print("Patient (child) goes into alarm2 state (Diagnostic: High temperature)\n")
+
+    return print("** Do a new diagnostic within five minutes **\n")
+
+def third_diganostic_child(body_temp, hearth_rate, saturation):
+    body_temp = float(input("Body Temperature\n"))
+    hearth_rate = int(input("Type Hearth Rate\n"))
+    saturation = float(input("Type Saturation\n"))
+    if body_temp > 37 and body_temp < 37.5:
+        pass
+        if hearth_rate > 79 and hearth_rate < 101:
+            pass
+            if saturation > 92 and saturation < 101:
+                print("Patient (child) remains in alarm2 state\n")
+            else:
+                print("Patient (child) goes into alarm3 state (Diagnostic: Oxygen Saturation out of range)\n")
+        else:
+            print("Patient (child) goes into alarm3 state (Diagnostic: Hearth Rate out of range\n")
+    else:
+        print("Patient (child) goes into alarm3 state (Diagnostic: High temperature)\n")
+
+    return print("** Do a new diagnostic within five minutes **\n")
+# -------------------------------------------------------------------------------------
+def first_diganostic_adolescent(body_temp, hearth_rate, saturation):
     if body_temp > 36.5 and body_temp < 37.5:
         pass
         if hearth_rate > 51 and hearth_rate < 101:
-            if saturation > 92 and saturation < 101:
-                print("Patient (adult) is stable\n")
+            pass
+            if saturation > 94 and saturation < 101:
+                print("Patient (adolescent) is stable\n")
             else:
-                print("Patient (adult) goes into alarm1 state\n")
+                print("Patient (adolescent) goes into alarm1 state (Diagnostic: Oxygen Saturation out of range)\n")
         else:
-            print("Patient (adult) goes into alarm1 state\n")
+            print("Patient (adolescent) goes into alarm1 state (Diagnostic: Hearth Rate out of range\n")
+    else:
+        print("Patient (adolescent) goes into alarm1 state (Diagnostic: High temperature)\n")
 
         return print("** Do a new diagnostic within five minutes **\n")
+
+def second_diagnostic_adolescent(body_temp, hearth_rate, saturation):
+    body_temp = float(input("Body Temperature\n"))
+    hearth_rate = int(input("Type Hearth Rate\n"))
+    saturation = float(input("Type Saturation\n"))
+    if body_temp > 36.5 and body_temp < 37.5:
+        pass
+        if hearth_rate > 51 and hearth_rate < 101:
+            pass
+            if saturation > 94 and saturation < 101:
+                print("Patient (adolescent) is stable\n")
+            else:
+                print("Patient (adolescent) goes into alarm2 state (Diagnostic: Oxygen Saturation out of range)\n")
+        else:
+            print("Patient (adolescent) goes into alarm2 state (Diagnostic: Hearth Rate out of range\n")
+    else:
+        print("Patient (adolescent) goes into alarm2 state (Diagnostic: High temperature)\n")
+
+    return print("** Do a new diagnostic within five minutes **\n")
+
+def third_diganostic_adolescent(body_temp, hearth_rate, saturation):
+    body_temp = float(input("Body Temperature\n"))
+    hearth_rate = int(input("Type Hearth Rate\n"))
+    saturation = float(input("Type Saturation\n"))
+    if body_temp > 36.5 and body_temp < 37.5:
+        pass
+        if hearth_rate > 51 and hearth_rate < 101:
+            pass
+            if saturation > 94 and saturation < 101:
+                print("Patient (adolescent) remains in alarm2 state\n")
+            else:
+                print("Patient (adolescent) goes into alarm3 state (Diagnostic: Oxygen Saturation out of range)\n")
+        else:
+            print("Patient (adolescent) goes into alarm3 state (Diagnostic: Hearth Rate out of range\n")
+    else:
+        print("Patient (adolescent) goes into alarm3 state (Diagnostic: High temperature)\n")
+
+    return print("** Do a new diagnostic within five minutes **\n")
+# -------------------------------------------------------------------------------------------
+def first_diganostic_adult(body_temp, hearth_rate, saturation):
+    if body_temp > 36.2 and body_temp < 37.2:
+        pass
+        if hearth_rate > 59 and hearth_rate < 81:
+            pass
+            if saturation > 94 and saturation < 101:
+                print("Patient (adult) is stable\n")
+            else:
+                print("Patient (adult) goes into alarm1 state (Diagnostic: Oxygen Saturation out of range)\n")
+        else:
+            print("Patient (adult) goes into alarm1 state (Diagnostic: Hearth Rate out of range\n")
+    else:
+        print("Patient (adult) goes into alarm1 state (Diagnostic: High temperature)\n")
+
+    return print("** Do a new diagnostic within five minutes **\n")
 
 def second_diagnostic_adult(body_temp, hearth_rate, saturation):
     body_temp = float(input("Body Temperature\n"))
     hearth_rate = int(input("Type Hearth Rate\n"))
     saturation = float(input("Type Saturation\n"))
-    if body_temp < 38:
+    if body_temp > 36.2 and body_temp < 37.2:
         pass
-        if hearth_rate > 150 and hearth_rate < 50:
+        if hearth_rate > 59 and hearth_rate < 81:
             pass
-            if saturation > 92 and saturation < 89:
+            if saturation > 94 and saturation < 101:
                 print("Patient (adult) is stable\n")
             else:
-                print("Patient (adult) goes into alarm2 state\n")
+                print("Patient (adult) goes into alarm2 state (Diagnostic: Oxygen Saturation out of range)\n")
         else:
-            print("Patient (adult) goes into alarm2 state\n")
+            print("Patient (adult) goes into alarm2 state (Diagnostic: Hearth Rate out of range\n")
     else:
-        print("Patient (adult) goes into alarm2 state\n")
+        print("Patient (adult) goes into alarm2 state (Diagnostic: High temperature)\n")
 
     return print("** Do a new diagnostic within five minutes **\n")
 
@@ -99,42 +267,62 @@ def third_diganostic_adult(body_temp, hearth_rate, saturation):
     body_temp = float(input("Body Temperature\n"))
     hearth_rate = int(input("Type Hearth Rate\n"))
     saturation = float(input("Type Saturation\n"))
-    if body_temp < 38:
+    if body_temp > 36.2 and body_temp < 37.2:
         pass
-        if hearth_rate < 160:
+        if hearth_rate > 59 and hearth_rate < 81:
             pass
-            if saturation < 88 and saturation > 85:
+            if saturation > 94 and saturation < 101:
                 print("Patient (adult) remains in alarm2 state\n")
             else:
-                print("Patient (adult) goes into alarm3 state\n")
+                print("Patient (adult) goes into alarm3 state (Diagnostic: Oxygen Saturation out of range)\n")
         else:
-            print("Patient (adult) goes into alarm3 state\n")
+            print("Patient (adult) goes into alarm3 state (Diagnostic: Hearth Rate out of range\n")
     else:
-        print("Patient (adult) goes into alarm3 state\n")
+        print("Patient (adult) goes into alarm3 state (Diagnostic: High temperature)\n")
 
     return print("** Do a new diagnostic within five minutes **\n")
-
+# -----------------------------------------------------------------------------------------------
 
 age = int(input("Type your age\n"))
 body_temp = float(input("Body Temperature\n"))
 hearth_rate = int(input("Type Hearth Rate\n"))
 saturation = float(input("Type Saturation\n"))
 
-#diagnostic()
-if age < 18:
-    first_diganostic_young(body_temp, hearth_rate, saturation)
+if age == 0 or age < 2:
+    first_diganostic_infant(body_temp, hearth_rate, saturation)
     time.sleep(5)  # 300 seconds for 5 minutes
-    second_diagnostic_young(body_temp, hearth_rate, saturation)
+    second_diagnostic_infant(body_temp, hearth_rate, saturation)
     time.sleep(5)  # 300 seconds for 5 minutos 
-    third_diganostic_young(body_temp, hearth_rate, saturation)
+    third_diganostic_infant(body_temp, hearth_rate, saturation)
 
-elif age > 18:
+elif age == 2 or age < 6:
+    first_diganostic_preschool_child(body_temp, hearth_rate, saturation)
+    time.sleep(5)  # 300 seconds for 5 minutes
+    second_diagnostic_preschool_child(body_temp, hearth_rate, saturation)
+    time.sleep(5)  # 300 seconds for 5 minutes
+    third_diganostic_preschool_child(body_temp, hearth_rate, saturation)
+    time.sleep(5)  # 300 seconds for 5 minutes
+
+elif age == 6 or age < 13:
+    first_diganostic_child(body_temp, hearth_rate, saturation)
+    time.sleep(5)  # 300 seconds for 5 minutes
+    second_diagnostic_child(body_temp, hearth_rate, saturation)
+    time.sleep(5)  # 300 seconds for 5 minutes
+    third_diganostic_child(body_temp, hearth_rate, saturation)
+    time.sleep(5)  # 300 seconds for 5 minutes
+
+elif age == 13 or age < 16:
+    first_diganostic_adolescent(body_temp, hearth_rate, saturation)
+    time.sleep(5)  # 300 seconds for 5 minutes
+    second_diagnostic_adolescent(body_temp, hearth_rate, saturation)
+    time.sleep(5)  # 300 seconds for 5 minutes
+    third_diganostic_adolescent(body_temp, hearth_rate, saturation)
+    time.sleep(5)  # 300 seconds for 5 minutes
+
+elif age == 16 or age > 15:
     first_diganostic_adult(body_temp, hearth_rate, saturation)
     time.sleep(5)  # 300 seconds for 5 minutes
     second_diagnostic_adult(body_temp, hearth_rate, saturation)
     time.sleep(5)  # 300 seconds for 5 minutes
     third_diganostic_adult(body_temp, hearth_rate, saturation)
     time.sleep(5)  # 300 seconds for 5 minutes
-
-else:
-    print("Do a new diagnostic")
